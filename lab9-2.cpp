@@ -1,16 +1,14 @@
+  //Lab9-2.cpp - displays two monthly car payments
+  //Created/revised by <Molly Howard> on <11/27/24>
+ 
   #include <iostream>
   #include <cmath>
   #include <iomanip>
   using namespace std;
+ 
   //function prototype
 double getPayment(int, double, int);
-int divide(int numerator, int denominator) {
-     if (denominator == 0) {
-          return -1;
-     } else {
-          return numerator / denominator;
-     }
-}
+
  int main()
  {
  int carPrice = 0;
@@ -20,8 +18,6 @@ int divide(int numerator, int denominator) {
  int term = 0;
  double creditPayment = 0.0;
  double dealerPayment = 0.0;
- double totalDealer = 0.0;
- double totalCredit = 0.0;
      cout << "Car price (after any trade-in): ";
 cin >> carPrice;
  cout << "Rebate: ";
@@ -32,21 +28,19 @@ cin >> carPrice;
  cin >> dealerRate;
 cout << "Term in years: ";
 cin >> term;
+
 //call function to calculate payments
  creditPayment = getPayment(carPrice - rebate,
  creditRate / 12, term * 12);
  dealerPayment = getPayment(carPrice,
- dealerRate / 12, term * 12);
- totalDealer = (term * 12) * dealerPayment;
- totalCredit = (term * 12) * creditPayment;
+dealerRate / 12, term * 12);
+
  //display payments
 cout << fixed << setprecision(2) << endl;
-cout << "Credit union payment: $"
+ cout << "Credit union payment: $"
  << creditPayment << endl;
-cout << "Total Credit union payment: $" << totalCredit << endl;
 cout << "Dealer payment: $"
  << dealerPayment << endl;
-cout << "Total Dealer payment: $" << totalDealer << endl;
  return 0;
       }//end of main function
  //*****function definitions*****
