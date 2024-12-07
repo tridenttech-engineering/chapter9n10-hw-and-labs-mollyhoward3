@@ -4,7 +4,7 @@
 using namespace std;
 
 // Function prototype
-void getPayment(int, double, int, double&);
+void getPayment(int prin, double monthRate, int months, double monthPay;
 
 int main()
 {
@@ -60,23 +60,8 @@ int main()
 } // End of main function    
 
 //***** Function definitions *****
-void getPayment(int prin, double monthRate, int months, double& monthPay)
-{
-    // If interest rate is 0, return principal / months (no interest loan)
-    if (monthRate == 0) {
-        monthPay = prin / months; // Simple division for no-interest loans
-        return;
-    }
-
-    // Calculate the denominator
-    double denominator = 1 - pow(1 + monthRate, -months);
-    
-    // Check for division by zero
-    if (denominator == 0) {
-        monthPay = -1; // Error: division by zero
-        return;
-    }
-
-    // Calculate monthly payment
-    monthPay = prin * monthRate / denominator;
-} // End of getPayment function
+void getPayment(int prin, double monthRate, int months, double monthPay)
+{  //calculates and returns a monthly payment
+	monthPay = prin * monthRate / 
+		(1 - pow(monthRate + 1, -months));
+}	//end of getPayment function
