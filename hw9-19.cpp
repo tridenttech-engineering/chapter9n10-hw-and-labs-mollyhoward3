@@ -60,7 +60,7 @@
  {
  //calculates and returns a monthly payment
  double monthPay = 0.0;
- double denominator = 0.0
+ double denominator = 0.0;
  denominator = 1 - pow(monthRate + 1, -months);
   if (denominator != 0) 
     monthPay = prin * monthRate / denominator;
