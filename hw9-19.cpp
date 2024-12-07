@@ -41,7 +41,7 @@
  dealerRate / 12, term * 12);
  //function to calculate the totals
  totalCredit = getTotal(creditPayment, term * 12);
- totalDealer + getTotal(dealerPayment, term * 12);
+ totalDealer = getTotal(dealerPayment, term * 12);
  //display payments/totals
  cout << fixed << setprecision(2) << endl;
  cout << "Credit union payment: $"
