@@ -4,7 +4,7 @@
 using namespace std;
 
 // Function prototype
-void getPayment(int prin, double monthRate, int months, double monthPay;
+void getPayment(int prin, double monthRate, int months, double monthPay);
 
 int main()
 {
