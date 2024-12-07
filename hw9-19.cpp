@@ -9,7 +9,7 @@
  
   //function prototype
  double getPayment(int, double, int);
- double getTotal(double, int)
+ double getTotal(double, int);
 
  int main()
  {
