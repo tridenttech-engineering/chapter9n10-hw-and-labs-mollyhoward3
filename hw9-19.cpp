@@ -60,9 +60,13 @@
  {
  //calculates and returns a monthly payment
  double monthPay = 0.0;
- monthPay = prin * monthRate /
- (1 - pow(monthRate + 1, -months));
- return monthPay;
+ double denominator = 0.0
+ denominator = 1 - pow(monthRate + 1, -months);
+  if (denominator != 0) 
+    monthPay = prin * monthRate / denominator;
+  else
+  monthPay = -1;
+  return monthPay;
  } //end of getPayment function
 
  double getTotal(double monthPay, int months) {
