@@ -69,7 +69,7 @@
      double total = 0.0;
      double roundedPay = 0.0;
 
-     roundedPay = static_cast<int>((monthPay + .005) / 100.0;
+     roundedPay = static_cast<int>((monthPay + .005) / 100.0);
      total = roundedPay * months;
      return total;
  } //end of get total function
